@@ -1,0 +1,8 @@
+there is a difference between sleep and Sleep....
+----------------------------------------------------------
+OMG!!!!!!!!.....
+
+the "sleep" function is used for Unix-based systems, while the "Sleep" function is used for Windows systems
+
+**sleep-->#include <unistd.h>
+**Sleep-->#include <windows.h>
