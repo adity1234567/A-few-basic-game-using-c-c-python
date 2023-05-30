@@ -2,3 +2,11 @@ learning about SFML...
 
 in the code i used c++ and SFML...
 still have no idea about this.
+
+https://www.sfml-dev.org/documentation/2.5.1/
+
+*Keyboard
+------------
+Give access to the real-time state of the keyboard.
+
+https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Keyboard.php
