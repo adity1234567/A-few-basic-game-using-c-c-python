@@ -1,20 +1,35 @@
 #include <SFML/Graphics.hpp>
 #include <bits/stdc++.h>
-int windowWidth=400;
-int windowHeight=300;
+int windowWidth=1000;
+int windowHeight=1000;
+int halfWinHeight=windowHeight/2;
+int haldWinWidth=windowWidth/2;
 
 using namespace sf;
 using namespace std;
+class platformClass{
+  public:
+      float xvel,yvel,xpos,ypos;
 
+      platformClass(float xpos,float ypos){
+          xpos=xpos;
+          ypos=ypos;
+      }
+
+};
 class playerClass{
      public:
          bool playerFaceRight;
+         bool onGround,playerUp,playerDown;
          float xvel,yvel,xpos,ypos;
          playerClass(){//constructor
 
          playerFaceRight=true;
          xvel=0,yvel=0;
          xpos=0,ypos=0;
+         onGround=false;
+         playerUp=false;
+         playerDown=false;
           //cout<<"jdakfjac8cfhd8chd8"<<endl;
 
          }
@@ -24,6 +39,7 @@ class playerClass{
                   playerFaceRight=true;
                   xvel=0.5;
               }
+
               if(playerLeft)
               {
                    playerFaceRight=false;
@@ -42,9 +58,43 @@ class playerClass{
                   xvel=0;
               }
 
+              if(onGround==true)
+              {
+                  yvel=0;
+              }
+              if(!onGround==false && playerUp==true)
+              {
+                  yvel=-0.25;
+              }
+              if(!onGround==false && playerDown==true)
+              {
+                  yvel+=0.25;
+              }
               xpos+=xvel;
               ypos+=yvel;
 
+              collide();
+         }
+
+         void collide(){
+
+            if(xpos>500||xpos<0)
+            {
+                xvel=0;
+            }
+            if(ypos>500||ypos<0)
+            {
+              //  xvel=0;
+                  onGround=true;
+            }
+            if(onGround==true&&playerUp==true)
+            {
+                onGround=false;
+            }
+            if(onGround==true&&playerDown==true)
+            {
+                onGround=false;
+            }
          }
 
 };
@@ -89,7 +139,7 @@ int main()
         app.clear();
 
         app.draw(myNameSprite);
-        app.draw(helloText);
+       // app.draw(helloText);
 
          myNameSprite.move(Vector2f(playerObject.xvel,playerObject.yvel));
         // Update the window
