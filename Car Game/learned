@@ -1,6 +1,6 @@
 
 
-**HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE)
+1.HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE)
 ----------------------------------------------------------
 
 This allows you to use the console handle to perform operations on the standard output console,
@@ -9,5 +9,23 @@ such as changing text color, setting cursor position, or modifying the console's
 run it-->
 -----------
 [link1](https://github.com/adity1234567/Games/blob/main/How%20it%20works!!/handle.cpp)
+
+
+ 2.COORD cursorPosition
+ ----------------------------
+ It is used to specify the position of the cursor or the coordinates of a character or cell within the console window.
+ X: Represents the horizontal position or column number within the console window. It is of type SHORT, which is a signed 16-bit integer.
+ Y: Represents the vertical position or row number within the console window. It is also of type SHORT.
+
+By using the COORD structure, 
+For example, you can use functions like SetConsoleCursorPosition to set the cursor position to a specific location
+or GetConsoleScreenBufferInfo to retrieve the current cursor position.
+
+3.kbhit()
+------------------
+4. CONSOLE_CURSOR_INFO lpCursor;
+----------------------------------
+5.
+ 
 
 
