@@ -1,0 +1,13 @@
+
+
+**HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE)
+----------------------------------------------------------
+
+This allows you to use the console handle to perform operations on the standard output console,
+such as changing text color, setting cursor position, or modifying the console's attributes.
+
+run it-->
+-----------
+[link1](https://github.com/adity1234567/Games/blob/main/How%20it%20works!!/handle.cpp)
+
+
