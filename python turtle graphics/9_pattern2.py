@@ -34,3 +34,11 @@ for i in range (4):
   #t.end_fill()
     t.up()
     t.backward(100)
+
+t.reset()
+list2=["purple","red","orange","blue","green"]
+for i in range(200):
+    t.color(list2[i%5])
+    t.pensize(i/10+1)
+    t.forward(i)
+    t.left(59)
